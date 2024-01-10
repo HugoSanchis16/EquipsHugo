@@ -6,6 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\EquipsController' => $baseDir . '/src/Controller/EquipsController.php',
+    'App\\Controller\\IniciController' => $baseDir . '/src/Controller/IniciController.php',
+    'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('Impact/assets/css/estilsInici.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block body %}
+  <h1 id="titolInici">Título de la Página de Inicio</h1>
+  <p id="paragrafInici">{{message}}</br>IES Lluis Simarro</br>Curs 23/24</br>
+    <a href="{{ path('equip', {'codi': random(1, 4)}) }}">
+  <img src="{{ asset('Impact/assets/img/imagenRelleno.jpg') }}" alt="Descripción de la imagen" class="imatgeInici">
+  </a>
+</p>
+{% endblock %}

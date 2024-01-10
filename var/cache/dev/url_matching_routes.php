@@ -33,10 +33,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/equip(?'
-                    .'|(?:/(\\d+))?(*:189)'
-                    .'|/([^/]++)(*:206)'
-                .')'
+                .'|/equip/([^/]++)(*:184)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -47,9 +44,8 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        189 => [[['_route' => 'equip', 'codi' => '1', '_controller' => 'App\\Controller\\EquipsController::fitxa'], ['codi'], null, null, false, true, null]],
-        206 => [
-            [['_route' => 'dades_equip', '_controller' => 'App\\Controller\\EquipsController::buscar'], ['text'], null, null, false, true, null],
+        184 => [
+            [['_route' => 'equip', '_controller' => 'App\\Controller\\EquipsController::fitxa'], ['codi'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

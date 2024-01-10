@@ -1,0 +1,54 @@
+h1#titolEquip {
+    width: 50%;
+    color: red;
+    border: solid red 1px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.paragrafEquip {
+    width: 80%;
+    border: solid black 1px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.imatgeEquip {
+    width: 50px;
+    margin: 10px;
+}
+
+body {
+    background-color: #EEE;
+}
+
+.imagenHome{
+    width: 50px;
+}
+.line {
+    width: 50%;
+    margin: 0 auto;  /* Para centrar horizontalmente */
+    background-color: white;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 40px;
+    border: 4px solid #7e7e7e; /* Añadir un borde */
+}
+
+.line span.bold {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #333;  /* Cambiar el color del texto en negrita */
+}
+
+.imagenTriste {
+    width: 50%;  /* Hace que la imagen ocupe el 100% del ancho de su contenedor */
+    max-width: 50%;  /* Asegura que la imagen no sea más ancha que su tamaño original */
+    height: auto;  /* Mantiene la proporción original de la imagen */
+    display: block;  /* Elimina cualquier espacio adicional debajo de la imagen */
+    margin: 0 auto;  /* Para centrar horizontalmente la imagen en su contenedor */
+}

@@ -1,3 +1,9 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+inici:
+    path: /
+    controller: 'App\Controller\IniciController::inici'
+equip:
+    path: /equip/{codi}
+    controller: App\Controller\EquipsController::fitxa
