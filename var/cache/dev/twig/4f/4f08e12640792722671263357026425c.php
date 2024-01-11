@@ -65,7 +65,7 @@ class __TwigTemplate_1f4c7f55f07e94fafa8159355051be44 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " Datos de equipo ";
+        echo " Dades de l'equip ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -74,7 +74,7 @@ class __TwigTemplate_1f4c7f55f07e94fafa8159355051be44 extends Template
 
     }
 
-    // line 6
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,48 +84,58 @@ class __TwigTemplate_1f4c7f55f07e94fafa8159355051be44 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "    <h1 id=\"titolEquip\">Equipo ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 7, $this->source); })()), "codi", [], "any", false, false, false, 7), "html", null, true);
+        // line 6
+        echo "    <h1 id=\"titolEquip\">Equip ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 6, $this->source); })()), "codi", [], "any", false, false, false, 6), "html", null, true);
         echo "</h1>
 
-    <p class=\"paragrafEquip\">Proyecto 2n DAW<br><img src=\"";
-        // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("Impact/assets/img/" . twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 9, $this->source); })()), "codi", [], "any", false, false, false, 9)) . ".png")), "html", null, true);
-        echo "\" alt=\"Imagen del Equipo\" class=\"imatgeEquip\" style=\"width:250px; height:250px;\"></p>
+    <p class=\"paragrafEquip\">
+    <br>
+    <br>
+    <span class=\"title\">IMATGE DEL ";
+        // line 11
+        echo twig_escape_filter($this->env, twig_upper_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 11, $this->source); })()), "nom", [], "any", false, false, false, 11)), "html", null, true);
+        echo "</span>
+    <br>
+    <br>
+    <img src=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((("Impact/assets/img/" . twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 14, $this->source); })()), "codi", [], "any", false, false, false, 14)) . ".png")), "html", null, true);
+        echo "\" alt=\"Imatge de l'Equip\" class=\"imatgeEquip\" style=\"width:250px; height:250px;\"></p>
 
     <div class=\"paragrafEquip\">
         <div class=\"line\"><span class=\"bold\"> Codi: </span> ";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 12, $this->source); })()), "codi", [], "any", false, false, false, 12), "html", null, true);
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 17, $this->source); })()), "codi", [], "any", false, false, false, 17), "html", null, true);
         echo " </div>
-        <div class=\"line\"><span class=\"bold\"> Nombre: </span> ";
-        // line 13
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 13, $this->source); })()), "nom", [], "any", false, false, false, 13), "html", null, true);
+        <div class=\"line\"><span class=\"bold\"> Nom: </span> ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), "html", null, true);
         echo " </div>
-        <div class=\"line\"><span class=\"bold\"> Ciclo: </span> ";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 14, $this->source); })()), "cicle", [], "any", false, false, false, 14), "html", null, true);
+        <div class=\"line\"><span class=\"bold\"> Cicle: </span> ";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 19, $this->source); })()), "cicle", [], "any", false, false, false, 19), "html", null, true);
         echo " </div>
         <div class=\"line\"><span class=\"bold\"> Curs: </span> ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 15, $this->source); })()), "curs", [], "any", false, false, false, 15), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 20, $this->source); })()), "curs", [], "any", false, false, false, 20), "html", null, true);
         echo " </div>
-        <div class=\"line\"><span class=\"bold\"> Miembros: </span> ";
-        // line 16
-        echo twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 16, $this->source); })()), "membres", [], "any", false, false, false, 16), ", "), "html", null, true);
+        <div class=\"line\"><span class=\"bold\"> Membres: </span> ";
+        // line 21
+        echo twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, (isset($context["equip"]) || array_key_exists("equip", $context) ? $context["equip"] : (function () { throw new RuntimeError('Variable "equip" does not exist.', 21, $this->source); })()), "membres", [], "any", false, false, false, 21), ", "), "html", null, true);
         echo " </div>
     </div>
 
     <div class=\"paragrafEquip\">
         <a href=\"";
-        // line 20
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
         echo "\">
-    <img src=\"";
-        // line 21
+            <img src=\"";
+        // line 26
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/home-page.png"), "html", null, true);
-        echo "\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\"></a>
+        echo "\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\">
+        </a>
     </div>
 ";
         
@@ -157,32 +167,38 @@ class __TwigTemplate_1f4c7f55f07e94fafa8159355051be44 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  127 => 21,  123 => 20,  116 => 16,  112 => 15,  108 => 14,  104 => 13,  100 => 12,  94 => 9,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  136 => 26,  132 => 25,  125 => 21,  121 => 20,  117 => 19,  113 => 18,  109 => 17,  103 => 14,  97 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %} Datos de equipo {% endblock %}
-
+{% block title %} Dades de l'equip {% endblock %}
 
 {% block body %}
-    <h1 id=\"titolEquip\">Equipo {{ equip.codi }}</h1>
+    <h1 id=\"titolEquip\">Equip {{ equip.codi }}</h1>
 
-    <p class=\"paragrafEquip\">Proyecto 2n DAW<br><img src=\"{{ asset('Impact/assets/img/' ~ equip.codi ~ '.png') }}\" alt=\"Imagen del Equipo\" class=\"imatgeEquip\" style=\"width:250px; height:250px;\"></p>
+    <p class=\"paragrafEquip\">
+    <br>
+    <br>
+    <span class=\"title\">IMATGE DEL {{equip.nom|upper }}</span>
+    <br>
+    <br>
+    <img src=\"{{ asset('Impact/assets/img/' ~ equip.codi ~ '.png') }}\" alt=\"Imatge de l'Equip\" class=\"imatgeEquip\" style=\"width:250px; height:250px;\"></p>
 
     <div class=\"paragrafEquip\">
         <div class=\"line\"><span class=\"bold\"> Codi: </span> {{ equip.codi }} </div>
-        <div class=\"line\"><span class=\"bold\"> Nombre: </span> {{ equip.nom }} </div>
-        <div class=\"line\"><span class=\"bold\"> Ciclo: </span> {{ equip.cicle }} </div>
+        <div class=\"line\"><span class=\"bold\"> Nom: </span> {{ equip.nom }} </div>
+        <div class=\"line\"><span class=\"bold\"> Cicle: </span> {{ equip.cicle }} </div>
         <div class=\"line\"><span class=\"bold\"> Curs: </span> {{ equip.curs }} </div>
-        <div class=\"line\"><span class=\"bold\"> Miembros: </span> {{ equip.membres | join(', ') }} </div>
+        <div class=\"line\"><span class=\"bold\"> Membres: </span> {{ equip.membres | join(', ') }} </div>
     </div>
 
     <div class=\"paragrafEquip\">
         <a href=\"{{ path('inici') }}\">
-    <img src=\"{{ asset('Impact/assets/img/home-page.png') }}\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\"></a>
+            <img src=\"{{ asset('Impact/assets/img/home-page.png') }}\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\">
+        </a>
     </div>
 {% endblock %}
 ", "dades_equip.html.twig", "/var/www/html/symfony/equipsHugo/templates/dades_equip.html.twig");

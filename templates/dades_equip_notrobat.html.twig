@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Datos de equipo {% endblock %}
+{% block title %} Dades de l'equip {% endblock %}
 
 {% block stylesheet %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/estilsEquip.css') }}">
 {% endblock %}
 
-
 {% block body %}
-    <h1 id="titolEquip">Equipo no encontrado</h1>
-    <p class="paragrafEquip">Proyecto 2n DAW<br><img src="{{ asset(imagen_ruta)}}" alt="Imagen del Equipo" class="imatgeEquip" style="width:250px; height=250px"></p>
+    <h1 id="titolEquip">Equip no trobat</h1>
+    <p class="paragrafEquip">Projecte 2n DAW<br></p>
 
     <div class="paragrafEquip">
-        <img src="{{ asset('Impact/assets/img/triste.jpg') }}" alt="Home" style="width=50px; height=50px; border-radius:5px;" class="imagenTriste">
+        <img src="{{ asset('Impact/assets/img/triste.jpg') }}" alt="Inici" style="width=50px; height=50px; border-radius:5px;" class="imagenTriste">
     </div>
 
     <div class="paragrafEquip">
         <a href="{{ path('inici') }}">
-    <img src="{{ asset('Impact/assets/img/home-page.png') }}" alt="Home" style="width=50px; height=50px; border-radius:5px;" class="imagenHome"></a>
+            <img src="{{ asset('Impact/assets/img/home-page.png') }}" alt="Inici" style="width=50px; height=50px; border-radius:5px;" class="imagenHome">
+        </a>
     </div>
 {% endblock %}

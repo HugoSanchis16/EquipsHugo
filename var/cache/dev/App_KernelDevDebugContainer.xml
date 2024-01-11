@@ -337,9 +337,11 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Service\ServeiDadesEquips" class="App\Service\ServeiDadesEquips" autowire="true" autoconfigure="true"/>
     <service id="App\Controller\IniciController" class="App\Controller\IniciController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Service\ServeiDadesEquips"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\IniciController"/>
       </call>
@@ -347,6 +349,7 @@
     <service id="App\Controller\EquipsController" class="App\Controller\EquipsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Service\ServeiDadesEquips"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\EquipsController"/>
       </call>
@@ -2411,14 +2414,6 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
-          <argument>onWorkerRunning</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -2433,14 +2428,6 @@
           <argument>onWorkerRunning</argument>
         </argument>
         <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.stop_worker_on_sigterm_signal_listener"/>
-          <argument>onWorkerStarted</argument>
-        </argument>
-        <argument>100</argument>
       </call>
       <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerMessageFailedEvent</argument>

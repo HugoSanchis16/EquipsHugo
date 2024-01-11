@@ -118,10 +118,39 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
         // line 13
         echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 13, $this->source); })()), "html", null, true);
         echo "</br>IES Lluis Simarro</br>Curs 23/24</br>
-  <img src=\"";
+    <a href=\"";
         // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("equip", ["codi" => twig_random($this->env, 1, 4)]), "html", null, true);
+        echo "\">
+  <img src=\"";
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/imagenRelleno.jpg"), "html", null, true);
         echo "\" alt=\"Descripción de la imagen\" class=\"imatgeInici\">
+  </a>
+  <h1>Llistat d'Equips</h1>
+
+    <ul class=\"equip-list\">
+        ";
+        // line 20
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["equips"]) || array_key_exists("equips", $context) ? $context["equips"] : (function () { throw new RuntimeError('Variable "equips" does not exist.', 20, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["equip"]) {
+            // line 21
+            echo "            <li class=\"equip-item\">
+                <a href=\"";
+            // line 22
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("equip", ["codi" => twig_get_attribute($this->env, $this->source, $context["equip"], "codi", [], "any", false, false, false, 22)]), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equip"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            echo "</a>
+            </li>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['equip'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 25
+        echo "    </ul>
 </p>
 ";
         
@@ -153,7 +182,7 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  123 => 14,  119 => 13,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  153 => 25,  142 => 22,  139 => 21,  135 => 20,  127 => 15,  123 => 14,  119 => 13,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -171,7 +200,18 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
 {% block body %}
   <h1 id=\"titolInici\">Título de la Página de Inicio</h1>
   <p id=\"paragrafInici\">{{message}}</br>IES Lluis Simarro</br>Curs 23/24</br>
+    <a href=\"{{ path('equip', {'codi': random(1, 4)}) }}\">
   <img src=\"{{ asset('Impact/assets/img/imagenRelleno.jpg') }}\" alt=\"Descripción de la imagen\" class=\"imatgeInici\">
+  </a>
+  <h1>Llistat d'Equips</h1>
+
+    <ul class=\"equip-list\">
+        {% for equip in equips %}
+            <li class=\"equip-item\">
+                <a href=\"{{ path('equip', {'codi': equip.codi}) }}\">{{ equip.nom }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 </p>
 {% endblock %}
 ", "inici.html.twig", "/var/www/html/symfony/equipsHugo/templates/inici.html.twig");

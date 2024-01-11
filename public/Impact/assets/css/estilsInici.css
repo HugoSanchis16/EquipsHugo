@@ -1,9 +1,12 @@
+
+h1{
+    text-align: center;
+}
 h1#titolInici {
     width: 50%;
     color: red;
     border: solid red 1px;
     margin: 10px auto;
-    text-align: center;
     padding: 10px;
     background-color: white;
 }
@@ -24,4 +27,27 @@ p#paragrafInici {
 
 body {
     background-color: #DDD;
+}
+
+
+.equip-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.equip-item {
+    font-weight: bold;
+    background-color: #b8b8b8;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block; /* Para que los elementos de la lista estén en línea */
+    transition: all 0.5s ease; /* Agrega una transición suave */
+}
+
+.equip-item:hover {
+    border-radius: 20px;
+    background-color: #e0e0e0; /* Cambia el color de fondo en hover */
 }

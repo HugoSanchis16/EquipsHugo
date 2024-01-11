@@ -6,6 +6,10 @@
 parameters:
 
 services:
+    App\Service\ServeiDadesEquips:
+        autowire: true
+        autoconfigure: true
+        
     App\Controller\IniciController:
         autowire: true
         tags:

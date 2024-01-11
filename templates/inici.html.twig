@@ -5,14 +5,26 @@
     <link href="{{ asset('Impact/assets/css/estilsInici.css') }}" rel="stylesheet">
 {% endblock %}
 
-
-{% block title %}Página de Inicio{% endblock %}
+{% block title %}Pàgina d'Inici{% endblock %}
 
 {% block body %}
-  <h1 id="titolInici">Título de la Página de Inicio</h1>
-  <p id="paragrafInici">{{message}}</br>IES Lluis Simarro</br>Curs 23/24</br>
+  <h1 id="titolInici">Títol de la Pàgina d'Inici</h1>
+  <p id="paragrafInici">{{ message }}</br>IES Lluís Simarro</br>Curs 23/24</br>
     <a href="{{ path('equip', {'codi': random(1, 4)}) }}">
-  <img src="{{ asset('Impact/assets/img/imagenRelleno.jpg') }}" alt="Descripción de la imagen" class="imatgeInici">
-  </a>
-</p>
+      <img src="{{ asset('Impact/assets/img/imagenRelleno.jpg') }}" alt="Descripció de la imatge" class="imatgeInici">
+    </a>
+    <br>
+    <hr>
+    <h1>Llistat d'Equips</h1>
+
+    <ul class="equip-list">
+        {% for equip in equips %}
+            <li class="equip-item" style="color: {{ equip.color }};">
+              <a href="{{ path('equip', {'codi': equip.codi}) }}" style="color: {{ equip.color }}; text-decoration: none; cursor: pointer;">
+                {{ equip.nom }}
+              </a>        
+            </li>
+        {% endfor %}
+    </ul>
+  </p>
 {% endblock %}

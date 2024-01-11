@@ -70,7 +70,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
 ";
         // line 21
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 30
+        // line 32
         echo "
   <!-- =======================================================
   * Template Name: Impact
@@ -88,7 +88,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
       <a href=\"index.html\" class=\"logo d-flex align-items-center\">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src=";
-        // line 46
+        // line 48
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/logo.png"), "html", null, true);
         echo "\"alt=\"\"> -->
         <h1>Impact<span>.</span></h1>
@@ -96,7 +96,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
       <nav id=\"navbar\" class=\"navbar\">
         <ul>
           <li><a href=\"";
-        // line 51
+        // line 53
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
         echo "\">Home</a></li>
           <li><a href=\"#about\">About</a></li>
@@ -131,9 +131,9 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
     </div>
   </header>
 ";
-        // line 83
+        // line 85
         $this->displayBlock('body', $context, $blocks);
-        // line 96
+        // line 98
         echo "
 </body>
 
@@ -201,6 +201,11 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
         // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/css/main.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
+  <link href=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/css/estilsEquip.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+
 
   ";
         
@@ -211,7 +216,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
 
     }
 
-    // line 83
+    // line 85
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -221,10 +226,10 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 84
+        // line 86
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 95
+        // line 97
         echo "  ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -234,7 +239,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
 
     }
 
-    // line 84
+    // line 86
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -244,37 +249,37 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 85
+        // line 87
         echo "  <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 86
+        // line 88
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/aos/aos.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 87
+        // line 89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 88
+        // line 90
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 89
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 90
+        // line 92
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/isotope-layout/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 91
+        // line 93
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "\"></script>
 
   <script src=\"";
-        // line 93
+        // line 95
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
   ";
@@ -307,7 +312,7 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  278 => 93,  273 => 91,  269 => 90,  265 => 89,  261 => 88,  257 => 87,  253 => 86,  248 => 85,  238 => 84,  228 => 95,  225 => 84,  215 => 83,  202 => 27,  198 => 26,  194 => 25,  190 => 24,  186 => 23,  181 => 22,  171 => 21,  152 => 8,  137 => 96,  135 => 83,  100 => 51,  92 => 46,  74 => 30,  72 => 21,  56 => 8,  47 => 1,);
+        return array (  283 => 95,  278 => 93,  274 => 92,  270 => 91,  266 => 90,  262 => 89,  258 => 88,  253 => 87,  243 => 86,  233 => 97,  230 => 86,  220 => 85,  206 => 28,  202 => 27,  198 => 26,  194 => 25,  190 => 24,  186 => 23,  181 => 22,  171 => 21,  152 => 8,  137 => 98,  135 => 85,  100 => 53,  92 => 48,  74 => 32,  72 => 21,  56 => 8,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -339,6 +344,8 @@ class __TwigTemplate_1ec61a52c847095cfef431f9ad115586 extends Template
 <link href=\"{{ asset('Impact/assets/vendor/glightbox/css/glightbox.min.css') }}\" rel=\"stylesheet\">
 <link href=\"{{ asset('Impact/assets/vendor/swiper/swiper-bundle.min.css') }}\" rel=\"stylesheet\">
 <link href=\"{{ asset('Impact/assets/css/main.css') }}\" rel=\"stylesheet\">
+  <link href=\"{{ asset('Impact/assets/css/estilsEquip.css') }}\" rel=\"stylesheet\">
+
 
   {% endblock %}
 

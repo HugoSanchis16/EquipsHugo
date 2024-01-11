@@ -1,23 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Datos de equipo {% endblock %}
-
+{% block title %} Dades de l'equip {% endblock %}
 
 {% block body %}
-    <h1 id="titolEquip">Equipo {{ equip.codi }}</h1>
+    <h1 id="titolEquip">Equip {{ equip.codi }}</h1>
 
-    <p class="paragrafEquip">Proyecto 2n DAW<br><img src="{{ asset('Impact/assets/img/' ~ equip.codi ~ '.png') }}" alt="Imagen del Equipo" class="imatgeEquip" style="width:250px; height:250px;"></p>
+    <p class="paragrafEquip">
+    <br>
+    <br>
+    <span class="title">IMATGE DEL {{equip.nom|upper }}</span>
+    <br>
+    <br>
+    <img src="{{ asset('Impact/assets/img/' ~ equip.codi ~ '.png') }}" alt="Imatge de l'Equip" class="imatgeEquip" style="width:250px; height:250px;"></p>
 
     <div class="paragrafEquip">
         <div class="line"><span class="bold"> Codi: </span> {{ equip.codi }} </div>
-        <div class="line"><span class="bold"> Nombre: </span> {{ equip.nom }} </div>
-        <div class="line"><span class="bold"> Ciclo: </span> {{ equip.cicle }} </div>
+        <div class="line"><span class="bold"> Nom: </span> {{ equip.nom }} </div>
+        <div class="line"><span class="bold"> Cicle: </span> {{ equip.cicle }} </div>
         <div class="line"><span class="bold"> Curs: </span> {{ equip.curs }} </div>
-        <div class="line"><span class="bold"> Miembros: </span> {{ equip.membres | join(', ') }} </div>
+        <div class="line"><span class="bold"> Membres: </span> {{ equip.membres | join(', ') }} </div>
     </div>
 
     <div class="paragrafEquip">
         <a href="{{ path('inici') }}">
-    <img src="{{ asset('Impact/assets/img/home-page.png') }}" alt="Home" style="width=50px; height=50px; border-radius:5px;" class="imagenHome"></a>
+            <img src="{{ asset('Impact/assets/img/home-page.png') }}" alt="Inici" style="width=50px; height=50px; border-radius:5px;" class="imagenHome">
+        </a>
     </div>
 {% endblock %}
