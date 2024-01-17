@@ -83,7 +83,7 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
 
     }
 
-    // line 9
+    // line 8
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -93,7 +93,7 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Página de Inicio";
+        echo "Pàgina d'Inici";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -102,7 +102,7 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
 
     }
 
-    // line 11
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,46 +112,55 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 12
-        echo "  <h1 id=\"titolInici\">Título de la Página de Inicio</h1>
+        // line 11
+        echo "  <h1 id=\"titolInici\">Títol de la Pàgina d'Inici</h1>
   <p id=\"paragrafInici\">";
-        // line 13
-        echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 13, $this->source); })()), "html", null, true);
-        echo "</br>IES Lluis Simarro</br>Curs 23/24</br>
+        // line 12
+        echo twig_escape_filter($this->env, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 12, $this->source); })()), "html", null, true);
+        echo "</br>IES Lluís Simarro</br>Curs 23/24</br>
     <a href=\"";
-        // line 14
+        // line 13
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("equip", ["codi" => twig_random($this->env, 1, 4)]), "html", null, true);
         echo "\">
-  <img src=\"";
-        // line 15
+      <img src=\"";
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/imagenRelleno.jpg"), "html", null, true);
-        echo "\" alt=\"Descripción de la imagen\" class=\"imatgeInici\">
-  </a>
-  <h1>Llistat d'Equips</h1>
+        echo "\" alt=\"Descripció de la imatge\" class=\"imatgeInici\">
+    </a>
+    <br>
+    <hr>
+    <h1>Llistat d'Equips</h1>
 
     <ul class=\"equip-list\">
         ";
-        // line 20
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["equips"]) || array_key_exists("equips", $context) ? $context["equips"] : (function () { throw new RuntimeError('Variable "equips" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["equips"]) || array_key_exists("equips", $context) ? $context["equips"] : (function () { throw new RuntimeError('Variable "equips" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["equip"]) {
-            // line 21
-            echo "            <li class=\"equip-item\">
-                <a href=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("equip", ["codi" => twig_get_attribute($this->env, $this->source, $context["equip"], "codi", [], "any", false, false, false, 22)]), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equip"], "nom", [], "any", false, false, false, 22), "html", null, true);
-            echo "</a>
+            echo "            <li class=\"equip-item\" style=\"color: ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equip"], "color", [], "any", false, false, false, 22), "html", null, true);
+            echo ";\">
+              <a href=\"";
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("equip", ["codi" => twig_get_attribute($this->env, $this->source, $context["equip"], "codi", [], "any", false, false, false, 23)]), "html", null, true);
+            echo "\" style=\"color: ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equip"], "color", [], "any", false, false, false, 23), "html", null, true);
+            echo "; text-decoration: none; cursor: pointer;\">
+                ";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["equip"], "nom", [], "any", false, false, false, 24), "html", null, true);
+            echo "
+              </a>        
             </li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['equip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 25
+        // line 28
         echo "    </ul>
-</p>
+  </p>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -182,7 +191,7 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  153 => 25,  142 => 22,  139 => 21,  135 => 20,  127 => 15,  123 => 14,  119 => 13,  116 => 12,  106 => 11,  87 => 9,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  162 => 28,  152 => 24,  146 => 23,  141 => 22,  137 => 21,  127 => 14,  123 => 13,  119 => 12,  116 => 11,  106 => 10,  87 => 8,  75 => 5,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -194,25 +203,28 @@ class __TwigTemplate_6e25b46534d1bcab4ad17195bc3c1c31 extends Template
     <link href=\"{{ asset('Impact/assets/css/estilsInici.css') }}\" rel=\"stylesheet\">
 {% endblock %}
 
-
-{% block title %}Página de Inicio{% endblock %}
+{% block title %}Pàgina d'Inici{% endblock %}
 
 {% block body %}
-  <h1 id=\"titolInici\">Título de la Página de Inicio</h1>
-  <p id=\"paragrafInici\">{{message}}</br>IES Lluis Simarro</br>Curs 23/24</br>
+  <h1 id=\"titolInici\">Títol de la Pàgina d'Inici</h1>
+  <p id=\"paragrafInici\">{{ message }}</br>IES Lluís Simarro</br>Curs 23/24</br>
     <a href=\"{{ path('equip', {'codi': random(1, 4)}) }}\">
-  <img src=\"{{ asset('Impact/assets/img/imagenRelleno.jpg') }}\" alt=\"Descripción de la imagen\" class=\"imatgeInici\">
-  </a>
-  <h1>Llistat d'Equips</h1>
+      <img src=\"{{ asset('Impact/assets/img/imagenRelleno.jpg') }}\" alt=\"Descripció de la imatge\" class=\"imatgeInici\">
+    </a>
+    <br>
+    <hr>
+    <h1>Llistat d'Equips</h1>
 
     <ul class=\"equip-list\">
         {% for equip in equips %}
-            <li class=\"equip-item\">
-                <a href=\"{{ path('equip', {'codi': equip.codi}) }}\">{{ equip.nom }}</a>
+            <li class=\"equip-item\" style=\"color: {{ equip.color }};\">
+              <a href=\"{{ path('equip', {'codi': equip.codi}) }}\" style=\"color: {{ equip.color }}; text-decoration: none; cursor: pointer;\">
+                {{ equip.nom }}
+              </a>        
             </li>
         {% endfor %}
     </ul>
-</p>
+  </p>
 {% endblock %}
 ", "inici.html.twig", "/var/www/html/symfony/equipsHugo/templates/inici.html.twig");
     }

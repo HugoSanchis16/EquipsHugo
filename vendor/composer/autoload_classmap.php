@@ -9,6 +9,7 @@ return array(
     'App\\Controller\\EquipsController' => $baseDir . '/src/Controller/EquipsController.php',
     'App\\Controller\\IniciController' => $baseDir . '/src/Controller/IniciController.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Service\\ServeiDadesEquips' => $baseDir . '/src/Service/ServeiDadesEquips.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

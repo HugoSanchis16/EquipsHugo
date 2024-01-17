@@ -561,6 +561,7 @@ class ComposerStaticInitf2f3ea2b52dc1dc543fcff270d9d2335
         'App\\Controller\\EquipsController' => __DIR__ . '/../..' . '/src/Controller/EquipsController.php',
         'App\\Controller\\IniciController' => __DIR__ . '/../..' . '/src/Controller/IniciController.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Service\\ServeiDadesEquips' => __DIR__ . '/../..' . '/src/Service/ServeiDadesEquips.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

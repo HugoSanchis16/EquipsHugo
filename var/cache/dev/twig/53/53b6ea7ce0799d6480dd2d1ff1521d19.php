@@ -66,7 +66,7 @@ class __TwigTemplate_8b974a288a1fdd16984d6ad855230d18 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " Datos de equipo ";
+        echo " Dades de l'equip ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -102,7 +102,7 @@ class __TwigTemplate_8b974a288a1fdd16984d6ad855230d18 extends Template
 
     }
 
-    // line 11
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,29 +112,27 @@ class __TwigTemplate_8b974a288a1fdd16984d6ad855230d18 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 12
-        echo "    <h1 id=\"titolEquip\">Equipo no encontrado</h1>
-    <p class=\"paragrafEquip\">Proyecto 2n DAW<br><img src=\"";
-        // line 13
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl((isset($context["imagen_ruta"]) || array_key_exists("imagen_ruta", $context) ? $context["imagen_ruta"] : (function () { throw new RuntimeError('Variable "imagen_ruta" does not exist.', 13, $this->source); })())), "html", null, true);
-        echo "\" alt=\"Imagen del Equipo\" class=\"imatgeEquip\" style=\"width:250px; height=250px\"></p>
+        // line 11
+        echo "    <h1 id=\"titolEquip\">Equip no trobat</h1>
+    <p class=\"paragrafEquip\">Projecte 2n DAW<br></p>
 
     <div class=\"paragrafEquip\">
         <img src=\"";
-        // line 16
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/triste.jpg"), "html", null, true);
-        echo "\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenTriste\">
+        echo "\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenTriste\">
     </div>
 
     <div class=\"paragrafEquip\">
         <a href=\"";
-        // line 20
+        // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
         echo "\">
-    <img src=\"";
-        // line 21
+            <img src=\"";
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Impact/assets/img/home-page.png"), "html", null, true);
-        echo "\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\"></a>
+        echo "\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\">
+        </a>
     </div>
 ";
         
@@ -166,32 +164,32 @@ class __TwigTemplate_8b974a288a1fdd16984d6ad855230d18 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  136 => 21,  132 => 20,  125 => 16,  119 => 13,  116 => 12,  106 => 11,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  133 => 20,  129 => 19,  122 => 15,  116 => 11,  106 => 10,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %} Datos de equipo {% endblock %}
+{% block title %} Dades de l'equip {% endblock %}
 
 {% block stylesheet %}
     {{ parent() }}
     <link rel=\"stylesheet\" href=\"{{ asset('css/estilsEquip.css') }}\">
 {% endblock %}
 
-
 {% block body %}
-    <h1 id=\"titolEquip\">Equipo no encontrado</h1>
-    <p class=\"paragrafEquip\">Proyecto 2n DAW<br><img src=\"{{ asset(imagen_ruta)}}\" alt=\"Imagen del Equipo\" class=\"imatgeEquip\" style=\"width:250px; height=250px\"></p>
+    <h1 id=\"titolEquip\">Equip no trobat</h1>
+    <p class=\"paragrafEquip\">Projecte 2n DAW<br></p>
 
     <div class=\"paragrafEquip\">
-        <img src=\"{{ asset('Impact/assets/img/triste.jpg') }}\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenTriste\">
+        <img src=\"{{ asset('Impact/assets/img/triste.jpg') }}\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenTriste\">
     </div>
 
     <div class=\"paragrafEquip\">
         <a href=\"{{ path('inici') }}\">
-    <img src=\"{{ asset('Impact/assets/img/home-page.png') }}\" alt=\"Home\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\"></a>
+            <img src=\"{{ asset('Impact/assets/img/home-page.png') }}\" alt=\"Inici\" style=\"width=50px; height=50px; border-radius:5px;\" class=\"imagenHome\">
+        </a>
     </div>
 {% endblock %}
 ", "dades_equip_notrobat.html.twig", "/var/www/html/symfony/equipsHugo/templates/dades_equip_notrobat.html.twig");
